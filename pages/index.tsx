@@ -14,8 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-          <Header />
-          <Input />
+          <Input label='Enter your nickname' />
           <Button text='Create New Room' href="/create-room" />
           <Button text='Join Existing Room' href="/join-room" secondary />
       </Layout>

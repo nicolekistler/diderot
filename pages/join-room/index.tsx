@@ -1,6 +1,7 @@
-import Layout from '@/components/Layout'
 import Head from 'next/head'
-
+import Layout from '@/components/Layout'
+import Input from '@/components/Input'
+import Button from '@/components/Button'
 export default function Home() {
   return (
     <>
@@ -11,7 +12,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        Join Room Page
+          <Input label='Enter the Room Code'></Input>
+          <Button text='Join Room' href="/create-room" />
+          <Button text='Go Back' href="/" secondary />
       </Layout>
     </>
   )

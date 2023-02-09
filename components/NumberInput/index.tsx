@@ -37,7 +37,7 @@ export default function NumberInput({
 
     return (
         <>
-            <div className='label'>{label}</div>
+            <div className='label'>{label.toUpperCase()}</div>
             <div className='number-input-container'>
                 <div className={`arrow-left ${currentNumber === initialNumber && 'disabled'}`} onClick={decrement}/>
                     <div className='number'>{currentNumber}</div>

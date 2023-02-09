@@ -1,6 +1,6 @@
 @use '@/styles/variables/colors.scss' as colors;
 
-.nicknameField {
+.valueField {
     margin: 2rem 0 2rem 0;
     border-bottom: 2px solid colors.$white;
     margin-left: 1rem;
@@ -14,11 +14,11 @@
     }
 }
 
-.nicknameInput {
+.valueInput {
     border: none;
 }
 
-.nicknameLabel {
+.valueLabel {
     margin-bottom: 1rem;
     color: colors.$white;
 }
