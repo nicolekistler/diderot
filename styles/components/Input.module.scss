@@ -1,0 +1,24 @@
+@use '@/styles/variables/colors.scss' as colors;
+
+.nicknameField {
+    margin: 2rem 0 2rem 0;
+    border-bottom: 2px solid colors.$white;
+    margin-left: 1rem;
+
+    input {
+        background-color: colors.$black;
+        color: colors.$white;
+        outline: none;
+        font-size: 1.5rem;
+        cursor:blink;
+    }
+}
+
+.nicknameInput {
+    border: none;
+}
+
+.nicknameLabel {
+    margin-bottom: 1rem;
+    color: colors.$white;
+}
