@@ -2,7 +2,7 @@ import styles from '@/styles/components/Layout.module.scss'
 import Header from '@/components/Header'
 
 type Props = {
-    children: React.ReactNode
+    children: React.ReactNode;
   }
 
 export default function Layout({

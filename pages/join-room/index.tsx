@@ -1,8 +1,16 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import Input from '@/components/Input'
 import Button from '@/components/Button'
-export default function Home() {
+
+export default function JoinRoom() {
+  const [ roomCode, setRoomCode ] = useState('')
+
+  const handleClick = (e: React.MouseEvent) => {
+      console.log('eeeee')
+  }
+
   return (
     <>
       <Head>
@@ -12,8 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-          <Input label='Enter the Room Code'></Input>
-          <Button text='Join Room' href="/create-room" />
+          <Input setValue={setRoomCode} value={roomCode} label='Enter the Room Code'></Input>
+          <Button text='Join Room' onClickOverride={handleClick} />
           <Button text='Go Back' href="/" secondary />
       </Layout>
     </>

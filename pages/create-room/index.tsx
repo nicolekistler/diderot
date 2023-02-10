@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 import NumberInput from '@/components/NumberInput'
 import style from '@/styles/pages/CreateRoom.module.scss'
 
-export default function Home() {
+export default function CreateRoom() {
   const [numPlayers, setNumPlayers] = useState();
   const [numRounds, setNumRounds] = useState();
 

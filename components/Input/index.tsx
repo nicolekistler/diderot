@@ -1,14 +1,16 @@
-import { useState } from 'react'
 import styles from '@/styles/components/Input.module.scss'
 
 type Props = {
   label: string;
+  setValue: Function;
+  value: string;
 }
 
 export default function Input({
-  label
+  label,
+  setValue,
+  value
 }: Props) {
-  const [value, setValue] = useState('');
 
   const handleValueChange = (event: React.FormEvent<HTMLInputElement>) => {
       // TODO: add char limit here etc

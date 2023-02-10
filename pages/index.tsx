@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import Head from 'next/head'
-import Header from '../components/Header'
-import Input from '../components/Input'
-import Button from '../components/Button'
+import Input from '@/components/Input'
+import Button from '@/components/Button'
 import Layout from '@/components/Layout'
 
 export default function Home() {
+  const [ name, setName ] = useState('')
+
   return (
     <>
       <Head>
@@ -14,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-          <Input label='Enter your nickname' />
+          <Input setValue={setName} value={name} label='Enter your nickname' />
           <Button text='Create New Room' href="/create-room" />
           <Button text='Join Existing Room' href="/join-room" secondary />
       </Layout>
