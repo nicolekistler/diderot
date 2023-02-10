@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react'
+import style from '@/styles/components/NumberInput.module.scss'
 
 type Props = {
     label: string;
@@ -37,11 +38,17 @@ export default function NumberInput({
 
     return (
         <>
-            <div className='label'>{label.toUpperCase()}</div>
-            <div className='number-input-container'>
-                <div className={`arrow-left ${currentNumber === initialNumber && 'disabled'}`} onClick={decrement}/>
+            <div className={style.label}>{label.toUpperCase()}</div>
+            <div className={style.count}>
+                <div 
+                    className={`${style.arrowLeft} ${currentNumber === initialNumber && 'disabled'}`}
+                    onClick={decrement}
+                />
                     <div className='number'>{currentNumber}</div>
-                <div className={`arrow-right ${currentNumber === maxNumber && 'disabled'}`} onClick={increment}/>
+                <div 
+                    className={`${style.arrowRight} ${currentNumber === maxNumber && 'disabled'}`}
+                    onClick={increment}
+                />
             </div>
         </>
     );

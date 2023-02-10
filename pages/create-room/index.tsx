@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Layout from '@/components/Layout'
 import Button from '@/components/Button'
 import NumberInput from '@/components/NumberInput'
+import style from '@/styles/pages/CreateRoom.module.scss'
 
 export default function Home() {
   const [numPlayers, setNumPlayers] = useState();
@@ -17,8 +18,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <NumberInput label='Number of Players' initialNumber={4} maxNumber={12} setNumber={setNumPlayers}/>
-        <NumberInput label='Number of Rounds' initialNumber={3} maxNumber={10} setNumber={setNumRounds}/>
+        <div className={style.inputContainer}>
+          <NumberInput label='Number of Players' initialNumber={4} maxNumber={12} setNumber={setNumPlayers}/>
+          <NumberInput label='Number of Rounds' initialNumber={3} maxNumber={10} setNumber={setNumRounds}/>
+        </div>
         <Button text='Launch Room' href='/' />
         <Button text='Go Back' href='/' secondary />
       </Layout>

@@ -1,0 +1,67 @@
+@use '../variables/colors.scss' as colors;
+
+.label {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: colors.$blue;
+    font-size: 2.7rem;
+}
+
+@mixin arrow {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin disabled-arrow {
+    &.disabled {
+        border-right: 1rem solid colors.$grey;
+    
+        &:hover {
+            cursor: auto;
+        }
+    }
+}
+
+.arrowLeft {
+    @include arrow;
+    border-right: 1rem solid colors.$white;
+    margin-right: 2rem;
+
+    &.disabled {
+        border-right: 1rem solid colors.$grey;
+    
+        &:hover {
+            cursor: auto;
+        }
+    }
+}
+
+.arrowRight {
+    @include arrow;
+    border-left: 1rem solid colors.$white;
+    margin-left: 2rem;
+
+    &.disabled {
+        border-left: 1rem solid colors.$grey;
+    
+        &:hover {
+            cursor: auto;
+        }
+    }
+}
