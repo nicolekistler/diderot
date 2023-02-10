@@ -22,7 +22,7 @@ export default function CreateRoom() {
           <NumberInput label='Number of Players' initialNumber={4} maxNumber={12} setNumber={setNumPlayers}/>
           <NumberInput label='Number of Rounds' initialNumber={3} maxNumber={10} setNumber={setNumRounds}/>
         </div>
-        <Button text='Launch Room' href='/' />
+        <Button text='Launch Room' href='/room/1234' />
         <Button text='Go Back' href='/' secondary />
       </Layout>
     </>
